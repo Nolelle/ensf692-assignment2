@@ -42,25 +42,25 @@ class Sensor:
     ):  # You may decide how to implement the arguments for this function
         match condition:
             case 1:
-                if status == "green":
+                if status.strip() == "green":
                     self.light = "green"
-                elif status == "yellow":
+                elif status.strip() == "yellow":
                     self.light = "yellow"
-                elif status == "red":
+                elif status.strip() == "red":
                     self.light = "red"
                 else:
                     print("Invalid vision change. \n")
             case 2:
-                if status == "yes":
+                if status.strip() == "yes":
                     self.pedestrian = "yes"
-                elif status == "no":
+                elif status.strip() == "no":
                     self.pedestrian = "no"
                 else:
                     print("Invalid vision change. \n")
             case 3:
-                if status == "yes":
+                if status.strip() == "yes":
                     self.vehicle = "yes"
-                elif status == "no":
+                elif status.strip() == "no":
                     self.vehicle = "no"
                 else:
                     print("Invalid vision change. \n")
